@@ -35,11 +35,6 @@ Completely safe to add and remove midgame.
 
 # Combat Extended is fully compatible!
 
-
-
-If you feel like trasforming money into motivation, there it is.
-https://www.buymeacoffee.com/bustedbunny] ![Image](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2c46f7eb-a870-430c-8351-a3f6f12d62f0/dcc83j2-f1093682-5169-4cdf-bf9d-1f0a12b63e40.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJjNDZmN2ViLWE4NzAtNDMwYy04MzUxLWEzZjZmMTJkNjJmMFwvZGNjODNqMi1mMTA5MzY4Mi01MTY5LTRjZGYtYmY5ZC0xZjBhMTJiNjNlNDAuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.SrFHM4OP_Ty-98L_RHHrFFQjHUuM20dA5Za0xCTVZzk)
- 
 	
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
@@ -53,3 +48,4 @@ https://www.buymeacoffee.com/bustedbunny] ![Image](https://images-wixmp-ed30a86b
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2938914170]Last updated 2023-03-26

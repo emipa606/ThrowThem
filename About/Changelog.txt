@@ -1,4 +1,7 @@
 # Changelog for ThrowThem
 
+1.4.1 - Changed load-order, probably better for ce to be load before this mod tries to patch it
+
+
 1.4.0 - First publish
 
