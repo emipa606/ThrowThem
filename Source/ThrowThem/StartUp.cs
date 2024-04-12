@@ -1,3 +1,4 @@
+using System.Reflection;
 using HarmonyLib;
 using Verse;
 
@@ -8,6 +9,6 @@ public static class StartUp
 {
     static StartUp()
     {
-        new Harmony("Mlie.ThrowThem").PatchAll();
+        new Harmony("Mlie.ThrowThem").PatchAll(Assembly.GetExecutingAssembly());
     }
 }
