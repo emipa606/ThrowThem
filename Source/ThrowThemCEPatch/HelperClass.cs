@@ -19,10 +19,10 @@ public static class HelperClass
 
     public static bool NoPrimaryWeaponOrInventory(Verb_ShootCEOneUse instance)
     {
-        return EquipmentCheck(instance.ShooterPawn);
+        return equipmentCheck(instance.ShooterPawn);
     }
 
-    public static bool EquipmentCheck(Pawn pawn)
+    private static bool equipmentCheck(Pawn pawn)
     {
         return pawn is { equipment: null } && pawn.equipment?.Primary == null;
     }

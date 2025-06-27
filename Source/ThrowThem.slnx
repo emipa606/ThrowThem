@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="ThrowThem/ThrowThem.csproj" />
+  <Project Path="ThrowThemCEPatch/ThrowThemCEPatch.csproj" />
+</Solution>

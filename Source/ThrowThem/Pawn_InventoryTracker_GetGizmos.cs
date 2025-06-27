@@ -7,7 +7,7 @@ using Verse;
 namespace ThrowThem;
 
 [HarmonyPatch(typeof(Pawn_InventoryTracker), nameof(Pawn_InventoryTracker.GetGizmos))]
-internal class GetGizmosPatch
+internal class Pawn_InventoryTracker_GetGizmos
 {
     public static IEnumerable<Gizmo> Postfix(IEnumerable<Gizmo> __result, ThingOwner<Thing> ___innerContainer,
         Pawn ___pawn)
@@ -26,7 +26,7 @@ internal class GetGizmosPatch
             }
 
             compEquippable.PrimaryVerb.caster = ___pawn;
-            var command_VerbTarget = new Command_VerbTarget();
+            var commandVerbTarget = new Command_VerbTarget();
             var styleDef = thing.StyleDef;
             var icon = styleDef?.UIIcon;
             if (icon == null)
@@ -45,45 +45,45 @@ internal class GetGizmosPatch
                 continue;
             }
 
-            command_VerbTarget.defaultDesc = $"{thing.LabelCap}: {thing.def.description.CapitalizeFirst()}";
-            command_VerbTarget.icon =
+            commandVerbTarget.defaultDesc = $"{thing.LabelCap}: {thing.def.description.CapitalizeFirst()}";
+            commandVerbTarget.icon =
                 styleDef != null && styleDef.UIIcon != null ? styleDef.UIIcon : thing.def.uiIcon;
-            command_VerbTarget.iconAngle = thing.def.uiIconAngle;
-            command_VerbTarget.iconOffset = thing.def.uiIconOffset;
-            command_VerbTarget.tutorTag = "VerbTarget";
-            command_VerbTarget.verb = compEquippable.PrimaryVerb;
-            command_VerbTarget.hotKey = KeyBindingDefOf.Misc4;
+            commandVerbTarget.iconAngle = thing.def.uiIconAngle;
+            commandVerbTarget.iconOffset = thing.def.uiIconOffset;
+            commandVerbTarget.tutorTag = "VerbTarget";
+            commandVerbTarget.verb = compEquippable.PrimaryVerb;
+            commandVerbTarget.hotKey = KeyBindingDefOf.Misc4;
             if (___pawn.Faction != Faction.OfPlayer)
             {
-                command_VerbTarget.Disable("CannotOrderNonControlled".Translate());
+                commandVerbTarget.Disable("CannotOrderNonControlled".Translate());
             }
             else
             {
                 if (___pawn.WorkTagIsDisabled(WorkTags.Violent))
                 {
-                    command_VerbTarget.Disable("IsIncapableOfViolence".Translate(___pawn.LabelShort, ___pawn));
+                    commandVerbTarget.Disable("IsIncapableOfViolence".Translate(___pawn.LabelShort, ___pawn));
                 }
                 else if (!___pawn.drafter.Drafted)
                 {
-                    command_VerbTarget.Disable("IsNotDrafted".Translate(___pawn.LabelShort, ___pawn));
+                    commandVerbTarget.Disable("IsNotDrafted".Translate(___pawn.LabelShort, ___pawn));
                 }
                 else if (compEquippable.PrimaryVerb is Verb_LaunchProjectile)
                 {
                     var apparel = compEquippable.PrimaryVerb.FirstApparelPreventingShooting();
                     if (apparel != null)
                     {
-                        command_VerbTarget.Disable("ApparelPreventsShooting"
+                        commandVerbTarget.Disable("ApparelPreventsShooting"
                             .Translate(___pawn.Named("PAWN"), apparel.Named("APPAREL")).CapitalizeFirst());
                     }
                 }
                 else if (EquipmentUtility.RolePreventsFromUsing(___pawn,
                              compEquippable.PrimaryVerb.EquipmentSource, out var reason))
                 {
-                    command_VerbTarget.Disable(reason);
+                    commandVerbTarget.Disable(reason);
                 }
             }
 
-            yield return command_VerbTarget;
+            yield return commandVerbTarget;
         }
     }
 }

@@ -6,7 +6,7 @@ using Verse.AI;
 namespace ThrowThem;
 
 [HarmonyPatch(typeof(Pawn), nameof(Pawn.TryGetAttackVerb))]
-internal class TryGetAttackVerbPatch
+internal class Pawn_TryGetAttackVerb
 {
     public static Verb Postfix(Verb __result, Pawn __instance)
     {
@@ -28,12 +28,7 @@ internal class TryGetAttackVerbPatch
 
         var inventory = __instance.inventory;
 
-        if (inventory?.innerContainer == null)
-        {
-            return __result;
-        }
-
-        if (__instance.CurJob.verbToUse == __result)
+        if (inventory?.innerContainer == null || __instance.CurJob.verbToUse == __result)
         {
             return __result;
         }

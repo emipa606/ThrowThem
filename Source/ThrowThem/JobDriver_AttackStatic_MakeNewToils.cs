@@ -4,7 +4,7 @@ using Verse.AI;
 namespace ThrowThem;
 
 [HarmonyPatch(typeof(JobDriver_AttackStatic), "MakeNewToils")]
-internal class AttackStaticPatch
+internal class JobDriver_AttackStatic_MakeNewToils
 {
     public static void Prefix(JobDriver_AttackStatic __instance)
     {
