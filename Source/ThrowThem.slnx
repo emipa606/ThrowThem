@@ -4,4 +4,10 @@
   </Configurations>
   <Project Path="ThrowThem/ThrowThem.csproj" />
   <Project Path="ThrowThemCEPatch/ThrowThemCEPatch.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
 </Solution>

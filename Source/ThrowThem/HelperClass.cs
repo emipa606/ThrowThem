@@ -9,7 +9,7 @@ public static class HelperClass
     {
         f.AddEndCondition(delegate
         {
-            if (!x.equipment.Contains(t) && !x.inventory.Contains(t))
+            if (!x.equipment.Contains(t) && !x.inventory.Contains(t) && !x.apparel.WornApparel.Any(a => a == t))
             {
                 return JobCondition.Incompletable;
             }
