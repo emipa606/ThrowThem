@@ -6,7 +6,7 @@ using Verse.AI;
 namespace ThrowThem;
 
 [HarmonyPatch(typeof(Pawn), nameof(Pawn.TryGetAttackVerb))]
-internal class Pawn_TryGetAttackVerb
+internal static class Pawn_TryGetAttackVerb
 {
     public static Verb Postfix(Verb __result, Pawn __instance)
     {
@@ -21,7 +21,7 @@ internal class Pawn_TryGetAttackVerb
             obj = curJob?.GetCachedDriverDirect;
         }
 
-        if (obj is not JobDriver_AttackStatic)
+        if (obj is not JobDriver_AttackStatic || __instance == null)
         {
             return __result;
         }

@@ -7,7 +7,7 @@ using Verse;
 namespace ThrowThem;
 
 [HarmonyPatch(typeof(Pawn_InventoryTracker), nameof(Pawn_InventoryTracker.GetGizmos))]
-internal class Pawn_InventoryTracker_GetGizmos
+internal static class Pawn_InventoryTracker_GetGizmos
 {
     public static IEnumerable<Gizmo> Postfix(IEnumerable<Gizmo> __result, ThingOwner<Thing> ___innerContainer,
         Pawn ___pawn)

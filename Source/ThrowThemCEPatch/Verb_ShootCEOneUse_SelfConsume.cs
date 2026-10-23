@@ -16,7 +16,7 @@ public static class Verb_ShootCEOneUse_SelfConsume
     private static readonly MethodInfo noPrimaryWeaponOrInventory =
         AccessTools.Method(typeof(HelperClass), nameof(HelperClass.NoPrimaryWeaponOrInventory));
 
-    private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+    public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
     {
         var first = false;
         var second = false;

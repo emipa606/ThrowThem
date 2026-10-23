@@ -48,4 +48,4 @@ Completely safe to add and remove midgame.
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/ThrowThem?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2938914170) | tags: weapons, throwing
+[![Image](https://img.shields.io/github/v/release/emipa606/ThrowThem?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2938914170) | weapons, throwing

@@ -4,7 +4,7 @@ using HarmonyLib;
 
 namespace ThrowThem;
 
-internal class ThrowThem
+internal static class ThrowThem
 {
     public static readonly List<Type> ModTypes =
     [
